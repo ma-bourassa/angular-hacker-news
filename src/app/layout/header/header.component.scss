@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  background-color: #ff6600;
+  color: black;
+  align-items: center;
+  padding: 4px;
+
+  .logo {
+    margin-right: 8px;
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .brand {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .menu {
+    justify-self: start;
+    font-size: 12px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .login {
+    margin-left: auto;
+    justify-self: end;
+    font-size: 12px;
+  }
+}
