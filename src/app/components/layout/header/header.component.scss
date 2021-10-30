@@ -3,12 +3,22 @@
   background-color: #ff6600;
   color: black;
   align-items: center;
-  padding: 4px;
+  padding: 2px;
 
   .logo {
     margin-right: 8px;
     a {
       cursor: pointer;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+
     }
   }
 
@@ -19,6 +29,10 @@
       font-size: 15px;
       font-weight: bold;
       color: black;
+      margin-right: 8px;
+      @media screen and (min-width: 768px) {
+        font-size: 13px;
+      }
     }
   }
 
