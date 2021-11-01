@@ -1,0 +1,38 @@
+.story-item {
+  display: flex;
+  margin-bottom: 5px;
+
+  &__rank {
+    flex-shrink: 0;
+    font-size: 11pt;
+    .upvote-arrow {
+      margin: 0 2px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    font-size: 9pt;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    color: black;
+    font-size: 11pt;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  &__url {
+    font-size: 8pt;
+  }
+}
