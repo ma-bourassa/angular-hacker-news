@@ -5,6 +5,10 @@
   align-items: center;
   padding: 4px 8px 6px 4px;
 
+  @media screen and (min-width: 768px) {
+    padding: 2px 4px 0;
+    font-size: 10pt;
+  }
   .logo {
     margin-right: 8px;
 
@@ -28,7 +32,7 @@
       font-weight: bold;
       margin-right: 8px;
       @media screen and (min-width: 768px) {
-        font-size: 13px;
+        font-size: 10pt;
       }
     }
   }
@@ -36,7 +40,9 @@
   .menu {
     justify-self: start;
     font-size: 12px;
-
+    @media screen and (min-width: 768px) {
+      font-size: 10pt;
+    }
   }
 
   .login {
