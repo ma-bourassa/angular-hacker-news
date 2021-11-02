@@ -6,6 +6,9 @@
       <br /><br />
       <button type="button" class="story-page__form__submit">add comment</button>
     </form>
+    <ng-container *ngFor="let comment of comments$ | async; index as i">
+      <app-comment-item [comment]="comment"></app-comment-item>
+    </ng-container>
   </ng-container>
 </div>
 

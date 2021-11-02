@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
 import { Story } from '../../interfaces/story';
 import { Router } from '@angular/router';
+import DateUtils from '../../utils/date.utils';
 
 @Component({
   selector: 'app-story-item',
@@ -20,16 +19,7 @@ export class StoryItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.storyUrl = this.setStoryUrl(this.story?.url);
-    this.timeFromNow = this.setCreationTime(this.story?.time);
-  }
-
-  setCreationTime(creationTime: number | undefined) {
-    if (creationTime) {
-      dayjs.extend(relativeTime);
-      const unitCreationDate = dayjs.unix(creationTime);
-      return dayjs(unitCreationDate).fromNow();
-    }
-    return undefined;
+    this.timeFromNow = DateUtils.getCreationTime(this.story?.time);
   }
 
   setStoryUrl(url: string | undefined) {
