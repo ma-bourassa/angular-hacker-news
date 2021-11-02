@@ -1,0 +1,12 @@
+<div class="story-page">
+  <ng-container *ngIf="story; else loading">
+    <app-story-item [story]="story" [rank]="undefined"></app-story-item>
+    <form class="story-page__form">
+      <textarea class="story-page__form__textarea" name="text" rows="6" cols="60"></textarea>
+      <br /><br />
+      <button type="button" class="story-page__form__submit">add comment</button>
+    </form>
+  </ng-container>
+</div>
+
+<ng-template #loading>loading...</ng-template>

@@ -1,4 +1,4 @@
-<div class="story-list">
+<div class="top-stories">
   <ng-container *ngFor="let story of stories$ | async; index as i">
     <app-story-item [rank]="i + 1" [story]="story"></app-story-item>
   </ng-container>

@@ -6,11 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StoryListComponent } from './components/story-list/story-list.component';
+import { TopStoriesComponent } from './pages/top-stories/top-stories.component';
 import { StoryItemComponent } from './components/story-item/story-item.component';
+import { StoryComponent } from './pages/story/story.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, StoryListComponent, StoryItemComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, TopStoriesComponent, StoryItemComponent, StoryComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

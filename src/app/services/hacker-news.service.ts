@@ -18,10 +18,14 @@ export class HackerNewsService {
         const filterIds = ids.splice(0, numberOfStory);
         return forkJoin(
           filterIds.map((id) => {
-            return this._http.get<Story>(`${this.apiUrl}/item/${id}.json`);
+            return this.getItem(id);
           })
         );
       })
     );
+  }
+
+  getItem(id: number | string) {
+    return this._http.get<Story>(`${this.apiUrl}/item/${id}.json`);
   }
 }

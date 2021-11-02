@@ -1,6 +1,7 @@
 <div class="story-item">
-  <div class="story-item__rank">
-    {{ rank }}.<a href="#"> <img class="upvote-arrow" src="assets/img/grayarrow.gif" alt="upvote" /></a>
+  <div *ngIf="rank" class="story-item__rank">{{ rank }}.</div>
+  <div class="story-item__upvote">
+    <a href="#"> <img class="upvote-arrow" src="assets/img/grayarrow.gif" alt="upvote" /></a>
   </div>
   <div class="story-item__info">
     <a *ngIf="story?.title" href="#" class="story-item__title"> {{ story.title }}</a>
@@ -9,6 +10,7 @@
       <a href="#">{{ storyUrl }}</a>
       <span>)</span>
     </div>
+    <div class="line-break"></div>
     <div *ngIf="story?.score" class="story-item__score">{{ story.score }} points</div>
     <span>
       by <a *ngIf="story?.by" href="#" class="story-item__author">{{ story.by }}</a>
@@ -19,6 +21,6 @@
       <a href="#">hide</a>
       <span> |</span>
     </div>
-    <a class="story-item__comments" href="#">{{ story?.descendants || 0 }} comments</a>
+    <a class="story-item__comments" (click)="goToStory()"> {{ story?.descendants || 0 }} comments </a>
   </div>
 </div>

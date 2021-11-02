@@ -5,8 +5,12 @@
   &__rank {
     flex-shrink: 0;
     font-size: 11pt;
+  }
+
+  &__upvote {
+    flex-shrink: 0;
     .upvote-arrow {
-      margin: 0 2px;
+      margin: 0 4px;
       width: 13px;
       height: 13px;
     }
@@ -15,13 +19,17 @@
   &__info {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 2px 4px;
     align-items: center;
     font-size: 9pt;
 
     a:hover {
       text-decoration: underline;
     }
+  }
+
+  .line-break {
+    width: 100%;
   }
 
   &__title {
@@ -34,5 +42,8 @@
 
   &__url {
     font-size: 8pt;
+  }
+  &__comments {
+    cursor: pointer;
   }
 }
