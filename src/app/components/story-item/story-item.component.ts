@@ -24,7 +24,7 @@ export class StoryItemComponent implements OnInit {
 
   setStoryUrl(url: string | undefined) {
     if (url) {
-      return new URL(<string>this.story.url).hostname.replace('www.', '');
+      return new URL(url).hostname.replace('www.', '');
     }
     return undefined;
   }

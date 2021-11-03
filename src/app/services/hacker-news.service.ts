@@ -36,11 +36,5 @@ export class HackerNewsService {
         return this._http.get<Comment>(`${this.apiUrl}/item/${id}.json`);
       })
     );
-    //   .pipe(
-    //   toArray(),
-    //   map((comments: Comment[]) => {
-    //     comments.sort((a, b) => a.);
-    //   })
-    // );
   }
 }

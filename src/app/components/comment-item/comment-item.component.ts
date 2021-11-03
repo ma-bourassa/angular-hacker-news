@@ -15,7 +15,5 @@ export class CommentItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.timeFromNow = DateUtils.getCreationTime(this.comment?.time);
-
-    console.log(this.comment);
   }
 }
